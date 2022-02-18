@@ -5,5 +5,5 @@
 * Thomas Eduard Del Rosario
 
 # How to run submitted code: 
-  1)Download or clone repositories 
+  1)Download or clone repositories__
   2)Run python sorting.py
