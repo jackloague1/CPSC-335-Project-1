@@ -7,15 +7,15 @@ def sort(lists):
         moves = 0
         # Iterating through the list from left to right.
         for i in range(0, len(lists)-1):
-            if lists[i + 1] > lists[i]:
+            if lists[i + 1] == "dark" and lists[i] == "light":
                 temp = lists[i]
                 lists[i] = lists[i + 1]
                 lists[i + 1] = temp
                 moves += 1   
-        m += moves
+        #m += moves
         # Iterating through the list from right to left.
         for i in range(len(lists)+1 , 0):
-            if lists[i] > lists[i - 1]:
+            if lists[i] == "dark" and lists[i - 1] == "light":
                 temp = lists[i]
                 lists[i] = lists[i - 1]
                 lists[i - 1] = temp
@@ -23,7 +23,7 @@ def sort(lists):
         m += moves
         # Checking if the list is sorted.
         for i in range(0, len(lists)):
-            if lists[i] != 0:
+            if lists[i] != "light":
                 sorting == False
 
             else:
@@ -40,7 +40,7 @@ input_n = input("Please enter a positive integer n for the amount of n light and
 # Checking if the input is a positive integer.
 if input_n.strip().isdigit():
     n = int(input_n)
-    lists = [0, 1] * n
+    lists = ["light", "dark"] * n
     string_list = [str(s) for s in lists]
     print("Let 0 be light and 1 be dark.")
     print("The disks before sorting when n is", n,":")
@@ -51,4 +51,3 @@ if input_n.strip().isdigit():
 # Ends program if the input is not a positive integer. 
 else:
     print("The input is not a positive integer. Please try again.")
-
