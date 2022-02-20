@@ -6,4 +6,4 @@
 
 # How to run submitted code: 
   * 1)In the Linux terminal, navigate to the directory of sorting.py
-  * 2)Run "python sorting.py" in Linux terminal
+  * 2)Run "python3 sorting.py" in Linux terminal
